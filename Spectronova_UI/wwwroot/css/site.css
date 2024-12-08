@@ -1,0 +1,406 @@
+.nav-link.active {
+    background-color: white !important;
+    color: black !important;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    
+}
+
+/* Card Styling */
+.card {
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+    .card h6 {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+
+.card {
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+    .card h6 {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+.employee-performance .progress-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+    .employee-performance .progress-row span {
+        flex: 1;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+.multi-progress {
+    flex: 4;
+    display: flex;
+    height: 12px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+    .multi-progress .progress-bar {
+        height: 12px;
+    }
+
+.legend {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.legend-item {
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+    .legend-item .badge {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+
+
+
+
+
+
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.progress-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.circle-chart {
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle {
+    fill: none;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+}
+
+    .circle.purple {
+        stroke: #6c63ff;
+        stroke-dashoffset: 20; /* Adjust this to control the segment position */
+    }
+
+    .circle.yellow {
+        stroke: #ffc107;
+        stroke-dashoffset: -60; /* Adjust this for segment position */
+    }
+
+    .circle.orange {
+        stroke: #ff5722;
+        stroke-dashoffset: -75; /* Adjust this for segment position */
+    }
+
+.inside-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.progress-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.progress-label {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+ul.list-unstyled {
+    font-size: 0.9rem;
+}
+
+.badge {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.bg-purple {
+    background-color: #6c63ff;
+}
+
+.bg-yellow {
+    background-color: #ffc107;
+}
+
+.bg-orange {
+    background-color: #ff5722;
+}
+
+.border-curve {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Action Buttons Styling (Eye and Vertical Three Dots) */
+.action-buttons {
+    display: flex;
+    align-items: center; /* Aligns items horizontally */
+    justify-content: flex-start; /* Ensures items are aligned to the left */
+    gap: 10px; /* Adds space between the icons */
+}
+
+    /* Individual icons */
+    .action-buttons i {
+        font-size: 18px;
+        color: #6366f1; /* Blue color for icons */
+        cursor: pointer;
+        transition: color 0.3s ease; /* Smooth hover effect */
+    }
+
+        /* Hover Effect on Icons */
+        .action-buttons i:hover {
+            color: #574dd6; /* Darker blue on hover */
+        }
+
+        /* Tooltip (optional) */
+        .action-buttons i[title] {
+            position: relative;
+        }
+
+            .action-buttons i[title]:hover::after {
+                content: attr(title);
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #000;
+                color: #fff;
+                padding: 5px;
+                border-radius: 5px;
+                font-size: 12px;
+            }
+
+/* Table Styling for better presentation */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 12px;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .table th {
+        background-color: #f8f9fc;
+        color: #495057;
+    }
+
+    .table td {
+        background-color: #ffffff;
+        color: #495057;
+    }
+
+/* Checkbox Styling */
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+/* Badge Styling */
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+/* Styling for Status Column */
+.status-column .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px; /* Padding inside the badge */
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50px; /* Circular shape */
+    color: #fff; /* Text color */
+    text-transform: capitalize; /* Capitalize the status text */
+}
+
+    /* Specific Badge Colors */
+    .status-column .badge.bg-success {
+        width: 90px;
+        height: 30px;
+        background-color: white;
+        border: 2px solid green;
+    }
+
+    .status-column .badge.bg-warning {
+        background-color: #ffc107; /* Yellow for Freelance */
+    }
+
+    .status-column .badge.bg-danger {
+        background-color: #dc3545; /* Red for other statuses like 'Inactive' */
+    }
+
+    /* Optional - Add small icon before status text for better visual */
+    .status-column .badge i {
+        margin-right: 5px; /* Space between the icon and text */
+    }
+
+    /* Hover effect on badges */
+    .status-column .badge:hover {
+        background-color: #007bff; /* Blue background on hover */
+        cursor: pointer;
+    }
+
+    /* Tooltip for Status */
+    .status-column .badge[title] {
+        position: relative;
+    }
+
+        .status-column .badge[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+.status-label {
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 15px;
+   border:1px solid orange;
+   
+}
+
+.sent-status-chat {
+    background-color: #d4f8e8; /* light green background */
+    color: #28a745; /* green text */
+}
+
+.freelance-status {
+   // background-color: yellow; /* light purple background */
+    color: orange; /* purple text */
+}
+
+.status-label-fulltime {
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 15px;
+    border: 1px solid green;
+}
+
+
+.status-dot-freelance {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: orange; /* Orange color for Freelance */
+    margin-right: 5px; /* Space between the dot and text */
+    display: inline-block; /* Ensures dot and text are in a single line */
+    vertical-align: middle; /* Aligns the dot in the middle of the text */
+}
+
+
+.status-dot-fulltime {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: green; /* Orange color for Freelance */
+    margin-right: 5px; /* Space between the dot and text */
+    display: inline-block; /* Ensures dot and text are in a single line */
+    vertical-align: middle; /* Aligns the dot in the middle of the text */
+}
+
+/* Freelance Status Label */
+.status-label-fulltime.fultime-status {
+    font-size: 14px;
+    font-weight: 600;
+    color: green; /* Orange color for Freelance */
+    display: inline-flex;
+    align-items: center; /* Ensures the text and dot are vertically centered */
+}
+
+
+/* Status Dot */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: orange; /* Orange color for Freelance */
+    margin-right: 5px; /* Space between the dot and text */
+    display: inline-block; /* Ensures dot and text are in a single line */
+    vertical-align: middle; /* Aligns the dot in the middle of the text */
+}
+
+/* Freelance Status Label */
+.status-label.freelance-status {
+    //font-size: 14px;
+    //font-weight: 600;
+    color: #fd7e14; /* Orange color for Freelance */
+    display: inline-flex;
+    align-items: center; /* Ensures the text and dot are vertically centered */
+}
+
+
+.fulltime-status {
+    // background-color: yellow; /* light purple background */
+    color: green; /* purple text */
+}

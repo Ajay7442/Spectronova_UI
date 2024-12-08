@@ -1,0 +1,518 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    ViewData["UserName"] = "Turja Sen";  // You can change this as per the logged-in user
+}
+
+
+
+<div class="row">
+    <!-- Total Employees Graph -->
+    <div class="col-md-4">
+        <div class="card shadow-sm p-3">
+            <h6>Total Employees</h6>
+            <div class="p-3 bg-light rounded">
+                <div class="d-flex justify-content-between align-items-center mb-2" style="background-color: #e6f7f1; border-radius: 8px;">
+                    <h3 class="mb-0">150</h3>
+                  @*   <span class="text-success" style="font-size: 14px;">↑ 50</span> *@
+                    <span class="text-success d-flex align-items-center" style="font-size: 14px;">
+                        <span style="transform: rotate(45deg); display: inline-block;">↑&nbsp;</span> 50
+                    </span>
+                    <span class="text-muted">Fulltime Employee</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center" style="background-color: #fef6e6; border-radius: 8px;">
+                    <h3 class="mb-0">50</h3>
+                    <span class="text-danger d-flex align-items-center" style="font-size: 14px;">
+                        <span style="transform: rotate(-45deg); display: inline-block;">↓&nbsp;</span> 10
+                    </span>
+                    <span class="text-muted">Freelance Employee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Attendance Overview Graph -->
+    <div class="col-md-4">
+        @* <div class="card shadow-sm p-3">
+            <h6>Attendance Overview</h6>
+            <div class="d-flex flex-column p-3 bg-light rounded">
+                <h3 class="mb-0">90% <span class="text-success" style="font-size: 14px;">↑ 20%</span></h3>
+                <span class="text-muted">since last month</span>
+                <div class="d-flex mt-3">
+                    <div class="flex-fill" style="height: 5px; background-color: #34d399;"></div>
+                    <div class="flex-fill mx-1" style="height: 5px; background-color: #fbbf24;"></div>
+                 
+                    <div class="flex-fill mx-1" style="height: 5px; background-color: #6366f1;"></div>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <small>Sick Leave</small>
+                    <small>Day Off</small>
+                    <small>On time</small>
+                </div>
+            </div>
+        </div> *@
+        <div class="card shadow-sm p-3">
+            <h6>Attendance Overview</h6>
+            <div class="d-flex align-items-center mb-2">
+                <h2 class="mb-0">90%</h2>
+                <span class="text-success ms-3" style="font-size: 14px;">
+                    <span style="transform: rotate(45deg); display: inline-block;">↑</span> 20% since last month
+                </span>
+            </div>
+            <!-- Single Line with Curved Sections -->
+            <div class="d-flex align-items-center" style="width: 100%; height: 10px; gap: 3px;">
+                <div class="border-curve" style="width: 25%; background-color: #6ad6e4; height: 100%; "></div> <!-- Sick Leave -->
+                <div  class="border-curve" style="width: 20%; background-color: #fbc96b; height: 100%;"></div> <!-- Day Off -->
+                <div  class="border-curve" style="width: 55%; background-color: #8c6ef6; height: 100%; "></div> <!-- On Time -->
+            </div>
+            <!-- Labels -->
+            <div class="d-flex justify-content-between mt-2">
+                <!-- Sick Leave -->
+                <span style="font-size: 14px; color: #6ad6e4;" class="d-flex align-items-center">
+                    <div style="width: 8px; height: 8px; background-color: #6ad6e4; border-radius: 50%; margin-right: 5px;"></div>
+                    Sick Leave
+                </span>
+                <!-- Day Off -->
+                <span style="font-size: 14px; color: #fbc96b;" class="d-flex align-items-center">
+                    <div style="width: 8px; height: 8px; background-color: #fbc96b; border-radius: 50%; margin-right: 5px;"></div>
+                    Day Off
+                </span>
+                <!-- On Time -->
+                <span style="font-size: 14px; color: #8c6ef6;" class="d-flex align-items-center">
+                    <div style="width: 8px; height: 8px; background-color: #8c6ef6; border-radius: 50%; margin-right: 5px;"></div>
+                    On Time
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Today Used Devices -->
+    
+    <div class="col-md-4">
+    <div class="card shadow-sm p-3">
+        <h6 class="text-center">Today Used Devices</h6>
+        <div class="d-flex align-items-center justify-content-between">
+            <!-- Circular Graph -->
+            <div class="progress-circle position-relative">
+                <svg class="circle-chart" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        class="circle purple"
+                        stroke-dasharray="80, 100"
+                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                    ></path>
+                    <path
+                        class="circle yellow"
+                        stroke-dasharray="13, 100"
+                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                    ></path>
+                    <path
+                        class="circle orange"
+                        stroke-dasharray="7, 100"
+                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                    ></path>
+                </svg>
+                <div class="inside-circle text-center">
+                    <span class="progress-value d-block fw-bold fs-4">100</span>
+                    <span class="progress-label text-muted">Overall</span>
+                </div>
+            </div>
+            <!-- Text Details -->
+            <ul class="list-unstyled ms-3">
+                <li class="d-flex align-items-center">
+                    <span class="badge bg-purple me-2"></span>
+                    <strong class="me-2">80</strong> MacBook
+                </li>
+                <li class="d-flex align-items-center">
+                    <span class="badge bg-yellow me-2"></span>
+                    <strong class="me-2">13</strong> Keyboard
+                </li>
+                <li class="d-flex align-items-center">
+                    <span class="badge bg-orange me-2"></span>
+                    <strong class="me-2">7</strong> Headphones
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+
+
+
+    
+    @* <div class="col-md-4">
+    <div class="card shadow-sm p-3">
+        <h6>Today Used Devices</h6>
+        <div class="progress-wrapper">
+            <div class="progress-circle">
+                <span class="progress-value">100</span>
+                <span class="progress-label">Overall</span>
+            </div>
+        </div>
+        <ul class="list-unstyled mt-3">
+            <li>
+                <span class="badge bg-blue"></span> <strong>80</strong> MacBook
+            </li>
+            <li>
+                <span class="badge bg-yellow"></span> <strong>13</strong> Keyboard
+            </li>
+            <li>
+                <span class="badge bg-orange"></span> <strong>7</strong> Headphones
+            </li>
+        </ul>
+    </div>
+</div>
+ *@
+
+
+</div>
+
+<div class="row mt-4">
+    @* <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+            <h6>Employee Performance Ratings</h6>
+            <p><strong>98%</strong> At TurHR, we're proud of our employees!</p>
+            <div class="progress mb-2">
+                <div class="progress-bar bg-primary" style="width: 80%;">80%</div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+            <h6>Income Statistics</h6>
+            <div class="chart-container">
+                <canvas id="incomeChart"></canvas>
+            </div>
+        </div>
+    </div> *@
+
+    <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+            <h6>Employee Performance Ratings</h6>
+            <p>
+                <strong>98%</strong> At TurAgency, we're proud of our employees' consistent punctuality and quality work.
+            </p>
+            <div class="employee-performance">
+                <!-- Progress Bars for Each Employee -->
+                <div class="progress-row">
+                    <span>Ahsan Tapadar</span>
+                    <div class="multi-progress">
+                        <div class="progress-bar border-curve" style="width: 40%; background-color: #A78BFA;"></div>
+                        <div class="progress-bar border-curve" style="width: 30%; background-color: #60A5FA;"></div>
+                        <div class="progress-bar border-curve" style="width: 20%; background-color: #34D399;"></div>
+                    </div>
+                </div>
+                <div class="progress-row">
+                    <span>Koyes Ahmed</span>
+                    <div class="multi-progress">
+                        <div class="progress-bar border-curve" style="width: 30%; background-color: #A78BFA;"></div>
+                        <div class="progress-bar border-curve" style="width: 35%; background-color: #60A5FA;"></div>
+                        <div class="progress-bar border-curve" style="width: 26%; background-color: #34D399;"></div>
+                    </div>
+                </div>
+                <div class="progress-row">
+                    <span>Washi Bin M.</span>
+                    <div class="multi-progress">
+                        <div class="progress-bar border-curve" style="width: 25%; background-color: #A78BFA;"></div>
+                        <div class="progress-bar border-curve" style="width: 30%; background-color: #60A5FA;"></div>
+                        <div class="progress-bar border-curve" style="width: 24%; background-color: #34D399;"></div>
+                    </div>
+                </div>
+                <div class="progress-row">
+                    <span>Mir Muhsin</span>
+                    <div class="multi-progress">
+                        <div class="progress-bar border-curve" style="width: 30%; background-color: #A78BFA;"></div>
+                        <div class="progress-bar border-curve" style="width: 50%; background-color: #60A5FA;"></div>
+                        <div class="progress-bar border-curve" style="width: 15%; background-color: #34D399;"></div>
+                    </div>
+                </div>
+                <div class="progress-row">
+                    <span>Turja Sen Das</span>
+                    <div class="multi-progress">
+                        <div class="progress-bar border-curve" style="width: 40%; background-color: #A78BFA;"></div>
+                        <div class="progress-bar border-curve" style="width: 48%; background-color: #60A5FA;"></div>
+                        <div class="progress-bar border-curve" style="width: 10%; background-color: #34D399;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="legend mt-3">
+                <span class="legend-item">
+                    <span class="badge bg-primary"></span><div style="width: 8px; height: 8px; background-color: #A78BFA; border-radius: 50%; margin-right: 5px;"></div>
+                    Task Completed
+                </span>
+                <span class="legend-item">
+                    <span class="badge bg-success"></span> <div style="width: 8px; height: 8px; background-color: #60A5FA; border-radius: 50%; margin-right: 5px;"></div>
+                    Presence
+                </span>
+                <span class="legend-item">
+                    <span class="badge bg-warning"></span><div style="width: 8px; height: 8px; background-color: #34D399; border-radius: 50%; margin-right: 5px;"></div>
+                    Completed Meeting
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Income Statistics -->
+    <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+            <h6>Income Statistics</h6>
+            <div class="chart-container" style="position: relative; height: 300px;">
+                <canvas id="incomeChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card shadow-sm p-3">
+            <h6>All Employees</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" class="form-check-input">
+                        </th>
+                        <th>Employee ID</th>
+                        <th>Employee Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Departments</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td>TUR871219</td>
+                        <td>Ahsan Tapadar</td>
+                        <td>ahsan.t@mail.com</td>
+                        <td><span class="role-badge">Sr UI/UX Designer</span></td>
+                        <td><span class="dept-badge">Team Projects</span></td>
+                        <td class="status-column">
+                            
+                            @* <span class="status-label-fulltime fulltime-status">
+                                <div style="width: 8px; height: 8px; background-color: green; border-radius: 50%; margin-right: 5px;"></div>
+                                Full Time</span> *@
+                            <span class="status-label-fulltime fulltime-status">
+                                <span class="status-dot-fulltime"></span> Full Time
+                            </span>
+                        </td>
+                        <td class="">
+                            <!-- Eye Icon First -->
+                            <i class="fas fa-eye" title="View Employee"></i>
+                            <!-- Three Dots Icon (Vertical) -->
+                            <i class="fas fa-ellipsis-v" title="More Actions"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td>TUR581503</td>
+                        <td>Wash Bin M</td>
+                        <td>wash.t@mail.com</td>
+                        <td><span class="role-badge">Lead Product Designer</span></td>
+                        <td><span class="dept-badge">Projects</span></td>
+                        <td class="status-column">
+                           @*  <span class="status-label freelance-status">
+                                <div style="width: 8px; height: 8px; background-color: orange; border-radius: 50%; margin-right: 5px;"></div>
+                                Freelance</span> *@
+                            <span class="status-label freelance-status">
+                                <span class="status-dot-freelance"></span> Freelance
+                            </span>
+                        </td>
+                        <td class="">
+                            <!-- Eye Icon First -->
+                            <i class="fas fa-eye" title="View Employee"></i>
+                            <!-- Three Dots Icon (Vertical) -->
+                            <i class="fas fa-ellipsis-v" title="More Actions"></i>
+                        </td>
+                    </tr>
+                    <!-- Add more employee rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Chart.js Script -->
+<script>
+    // Income Statistics Chart (Bar Chart)
+    // const incomeCtx = document.getElementById('incomeChart').getContext('2d');
+    // const incomeChart = new Chart(incomeCtx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    //         datasets: [
+    //             {
+    //                 label: 'Income',
+    //                 data: [2200, 2800, 3000, 4000, 5000, 4500, 4900, 5200, 4800, 4700, 4900, 5300],
+    //                 backgroundColor: 'rgba(99, 102, 241, 0.8)',
+    //             },
+    //             {
+    //                 label: 'Expenses',
+    //                 data: [1000, 1200, 1300, 1500, 1700, 1600, 1800, 1900, 1500, 1700, 1600, 1400],
+    //                 backgroundColor: 'rgba(241, 102, 99, 0.8)',
+    //             },
+    //         ],
+    //     },
+    //     options: {
+    //         responsive: true,
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true,
+    //             },
+    //         },
+    //     },
+    // });
+    const incomeCtx = document.getElementById('incomeChart').getContext('2d');
+
+    // Gradient for income
+    const gradientIncome = incomeCtx.createLinearGradient(0, 0, 0, 400);
+    gradientIncome.addColorStop(0, 'rgba(142, 84, 233, 1)'); // Dark purple
+    gradientIncome.addColorStop(1, 'rgba(142, 84, 233, 0.2)'); // Light purple
+
+    // Striped pattern for expenses
+    const patternCanvas = document.createElement('canvas');
+    const patternCtx = patternCanvas.getContext('2d');
+    patternCanvas.width = 20;
+    patternCanvas.height = 20;
+    patternCtx.fillStyle = 'rgba(82, 145, 234, 0.1)'; // Light blue background
+    patternCtx.fillRect(0, 0, 20, 20);
+    patternCtx.strokeStyle = 'rgba(82, 145, 234, 1)'; // Blue stripes
+    patternCtx.lineWidth = 2;
+    patternCtx.beginPath();
+    patternCtx.moveTo(0, 20);
+    patternCtx.lineTo(20, 0);
+    patternCtx.stroke();
+
+    const stripedPattern = incomeCtx.createPattern(patternCanvas, 'repeat');
+
+    // Chart.js configuration
+    new Chart(incomeCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], // Matching x-axis labels
+            datasets: [
+                {
+                    label: 'Income',
+                    data: [10000, 12000, 15000, 17000, 20000, 25000, 27000, 22000, 19000, 18000, 21000, 23000],
+                    backgroundColor: gradientIncome,
+                    borderRadius: { topLeft: 10, topRight: 10 }, // Rounded top corners
+                },
+                {
+                    label: 'Expenses',
+                    data: [7000, 8000, 9000, 10000, 11000, 13000, 12000, 11000, 10000, 9000, 10000, 11000],
+                    backgroundColor: stripedPattern,
+                    borderRadius: { topLeft: 10, topRight: 10 }, // Rounded top corners
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        color: '#555',
+                        boxWidth: 12,
+                    },
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return `${tooltipItem.dataset.label}: $${tooltipItem.raw.toLocaleString()}`;
+                        },
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    stacked: true, // Stack bars horizontally
+                    grid: {
+                        display: false,
+                    },
+                    ticks: {
+                        color: '#888',
+                    },
+                },
+                y: {
+                    stacked: true, // Stack bars vertically
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 5000, // Adjust intervals
+                        color: '#888',
+                    },
+                    grid: {
+                        color: '#eee',
+                    },
+                },
+            },
+        },
+    });
+
+
+    // Total Employees Chart (Horizontal Bar)
+    // const totalEmployeesCtx = document.getElementById('totalEmployeesChart').getContext('2d');
+    // const totalEmployeesChart = new Chart(totalEmployeesCtx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['Full-time', 'Freelance'],
+    //         datasets: [{
+    //             label: 'Total Employees',
+    //             data: [150, 50],
+    //             backgroundColor: '#6366f1', // Purple color
+    //             borderColor: '#6366f1',
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         responsive: true,
+    //         indexAxis: 'y',  // Horizontal bar chart
+    //         scales: {
+    //             x: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
+
+    // Attendance Overview Chart (Horizontal Bar)
+    // const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
+    // const attendanceChart = new Chart(attendanceCtx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['Present', 'Absent'],
+    //         datasets: [{
+    //             label: 'Attendance Overview',
+    //             data: [90, 10],  // Assume 90% present and 10% absent
+    //             backgroundColor: '#34d399', // Green color
+    //             borderColor: '#34d399',
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         responsive: true,
+    //         indexAxis: 'y',  // Horizontal bar chart
+    //         scales: {
+    //             x: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
+</script>
